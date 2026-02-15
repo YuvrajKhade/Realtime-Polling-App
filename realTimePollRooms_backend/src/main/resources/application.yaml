@@ -8,13 +8,15 @@ spring:
 server:
   port: ${PORT:8080}
 ---
+#jdbc:mysql://root:AccaoqJZEzPDIHoLgkzEzREcXFbexbhr@crossover.proxy.rlwy.net:10614/railway
 spring:
   config:
     activate:
       on-profile: dev
   datasource:
-    url: jdbc:mysql://root:AccaoqJZEzPDIHoLgkzEzREcXFbexbhr@crossover.proxy.rlwy.net:10614/railway
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/polling_db
+    username: root
+    password: ${my_sql_pass}
 
   jpa:
     hibernate:
