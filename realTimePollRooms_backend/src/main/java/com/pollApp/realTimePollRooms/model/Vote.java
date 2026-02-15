@@ -26,7 +26,7 @@ public class Vote {
     private String pollId;
 
     @Column(name = "voter_id",nullable = false)
-    private  String voterId;
+    private  Long voterId;
 
     @Column(name = "voter",nullable = false)
     private String voter;

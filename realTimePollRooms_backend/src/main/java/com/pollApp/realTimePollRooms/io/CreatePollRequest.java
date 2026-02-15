@@ -1,6 +1,7 @@
 package com.pollApp.realTimePollRooms.io;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class CreatePollRequest {
     @Size(min=5, max=500,message = "Question must be between 5 and 500 characters")
     private String quest;
 
-    @NotBlank(message = "Options are required")
+    @NotEmpty(message = "Options are required")
     @Size(min=2, max=10,message = "Poll must be between 2 and 10 options")
     private List<String> options;
 
