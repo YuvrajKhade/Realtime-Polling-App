@@ -1,12 +1,13 @@
+server:
+  port: ${PORT:8080}
+
 spring:
   application:
     name: Polling-backend
-
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:dev}
 
-server:
-  port: ${PORT:8080}
+
 ---
 #jdbc:mysql://root:AccaoqJZEzPDIHoLgkzEzREcXFbexbhr@crossover.proxy.rlwy.net:10614/railway
 spring:
