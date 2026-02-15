@@ -25,7 +25,7 @@ public class PollOption {
     @JoinColumn(name = "poll_id", nullable = false)
     private Poll poll;
 
-    @OneToMany(mappedBy = "option", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pollOpt", cascade = CascadeType.ALL)
     private List<Vote> votes = new ArrayList<>();
 
     public int getVoteCount(){
