@@ -1,26 +1,34 @@
-.App{
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.App {
   min-height: 100vh;
-  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.content-wrapper{
+.content-wrapper {
   min-height: calc(100vh - 56px);
   padding: 2rem 0;
 }
 
-.card-custom{
+.card-custom {
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0,0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   background: white;
   transition: transform 0.3s ease;
 }
 
-.card-custom:hover{
+.card-custom:hover {
   transform: translateY(-5px);
 }
 
-.btn-primary-custom{
-  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+.btn-primary-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   padding: 10px 30px;
   border-radius: 25px;
@@ -28,16 +36,16 @@
   transition: all 0.3s ease;
 }
 
-.btn-primary-custom:hover{
+.btn-primary-custom:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-.progress-bar-custom{
- background: linear-gradient(90deg,#667eea 0%,#764ba2 100%);
- transition: width 0.5s ease;
+.progress-bar-custom {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
 }
-.poll-option{
+.poll-option {
   transition: all 0.3s ease;
   cursor: pointer;
   border-radius: 10px;
@@ -46,11 +54,10 @@
   border: 2px solid #e0e0e0;
 }
 
-.poll-option:hover{
+.poll-option:hover {
   border-color: #667eea;
   background-color: #f8f9ff;
 }
-
 
 .poll-option.selected {
   border-color: #667eea;

@@ -1,6 +1,7 @@
 import "./App.css";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import CreatePoll from "./pages/CreatePoll";
 import ViewPoll from "./pages/ViewPoll";
@@ -21,11 +22,13 @@ function App() {
         draggable
         pauseOnHover
       />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreatePoll />} />
-        <Route path="/poll/:pollId" element={<ViewPoll />} />
-      </Routes>
+      <div className="content-wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<CreatePoll />} />
+          <Route path="/poll/:pollId" element={<ViewPoll />} />
+        </Routes>
+      </div>
     </div>
   );
 }
