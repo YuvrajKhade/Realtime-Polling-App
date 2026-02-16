@@ -1,42 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App{
+  min-height: 100vh;
+  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+}
+
+.content-wrapper{
+  min-height: calc(100vh - 56px);
+  padding: 2rem 0;
+}
+
+.card-custom{
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0,0, 0.2);
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.card-custom:hover{
+  transform: translateY(-5px);
+}
+
+.btn-primary-custom{
+  background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.progress-bar-custom{
+ background: linear-gradient(90deg,#667eea 0%,#764ba2 100%);
+ transition: width 0.5s ease;
+}
+.poll-option{
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.poll-option:hover{
+  border-color: #667eea;
+  background-color: #f8f9ff;
+}
+
+
+.poll-option.selected {
+  border-color: #667eea;
+  background-color: #f0f4ff;
+}
+
+.share-link-box {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px dashed #667eea;
+  margin: 20px 0;
+}
+
+.copy-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-button:hover {
+  background: #5568d3;
+}
+
+.navbar-custom {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.hero-section {
+  text-align: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.feature-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.feature-icon {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results-container {
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.vote-count-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
 }
