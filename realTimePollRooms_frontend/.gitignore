@@ -13,6 +13,9 @@ dist-ssr
 *.local
 build/
 
+.env
+.env.local
+.env.production
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,9 +27,7 @@ build/
 *.sln
 *.sw?
 
-.env
-.env.local
-.env.production
+
 
 .DS_Store
 Thumds.db
