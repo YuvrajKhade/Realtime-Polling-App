@@ -1,5 +1,6 @@
 import { toast } from "react-toastify";
 import { Button } from "bootstrap";
+import assest from "../assests/assest";
 
 function ShareLink({ pollId }) {
   const shareUrl = `${window.location.origin}/poll/${pollId}`;
@@ -9,7 +10,7 @@ function ShareLink({ pollId }) {
   };
   return (
     <div className="share-link-box">
-      <h5 className="mb-3">🔗 Share this poll</h5>
+      <h5 className="mb-3"> <img src={assest.share} alt="sharing icon" width={40} height={40} /> Share this poll</h5>
       <div className="d-flex gap-2">
         <input type="text" className="form-control" value={shareUrl} readOnly />
         <Button

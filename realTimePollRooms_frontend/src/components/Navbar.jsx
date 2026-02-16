@@ -1,11 +1,12 @@
 import { Navbar as BSNavbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import assest from "../assests/assest";
 
 function Navbar() {
   return (
     <BSNavbar className="navbar-custom w-100" variant="dark" expand="lg">
       <Container fluid>
-        <BSNavbar.Brand>📊 PollRooms</BSNavbar.Brand>
+        <BSNavbar.Brand> <img src={assest.poll} alt="poll" height={40} width={40}/> PollRooms</BSNavbar.Brand>
         <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BSNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
