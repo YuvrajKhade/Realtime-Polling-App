@@ -9,7 +9,7 @@ spring:
 
 
 ---
-#jdbc:mysql://root:AccaoqJZEzPDIHoLgkzEzREcXFbexbhr@crossover.proxy.rlwy.net:10614/railway
+#Dev
 spring:
   config:
     activate:
@@ -28,6 +28,10 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         format-sql: true
 
+app:
+  cors:
+    allowed-origin: http://localhost:3000,http://localhost:5173
+
 logging:
   level:
     org:
@@ -37,6 +41,7 @@ logging:
       pollingapp:
         backend: DEBUG
 ---
+#prod
 spring:
   config:
     activate:
@@ -52,6 +57,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+
+app:
+  cors:
+    allowed-origin: ${ALLOWED_ORIGINS}
 
 
 logging:
