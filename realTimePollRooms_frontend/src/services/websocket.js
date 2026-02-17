@@ -1,18 +1,17 @@
 import { Client } from "@stomp/stompjs";
-import SockJS from "sockjs-client";
 
 const WS_URL = import.meta.env.VITE_WS_URL || "http://localhost:8080/ws";
 
 export const connectWebSocket = (pollId, onMsgReceived) => {
   const client = new Client({
-    webSocketFactory: () => SockJS(WS_URL),
+    brokerURL:WS_URL.replace('http','ws').replace('https','wss')+'/websocket',
     reconnectDelay: 5000,
     heartbeatIncoming: 4000,
     heartbeatOutgoing: 4000,
 
     onConnect: () => {
       console.log("Websocket Connected");
-      client.subscribe("/topic/poll/${pollId}", (msg) => {
+      client.subscribe(`/topic/poll/${pollId}`, (msg) => {
         const updatedPoll = JSON.parse(msg.body);
         onMsgReceived(updatedPoll);
       });

@@ -11,24 +11,34 @@ const api = axios.create({
   },
 });
 
-export const createPoll=async(pollData)=>{
-    try {
-        const response=await api.post('/polls',pollData)
-        return response.data
-    } catch (error) {
-        toast.error(error.message)
-        throw error
-    }
-}
+export const createPoll = async (pollData) => {
+  try {
+    const response = await api.post("/polls", pollData);
+    return response.data;
+  } catch (error) {
+    toast.error(error.message);
+    throw error;
+  }
+};
 
-export const submitVote=async(pollId,voteData)=>{
-    try {
-        const response =await api.post(`polls/${pollId}/vote`,voteData)
-        return response.data
-    } catch (error) {
-        toast.error(error.message)
-        throw error
-    }
-}
+export const submitVote = async (pollId, voteData) => {
+  try {
+    const response = await api.post(`polls/${pollId}/vote`, voteData);
+    return response.data;
+  } catch (error) {
+    toast.error(error.message);
+    throw error;
+  }
+};
 
-export default api
+export const getPoll = async (pollId) => {
+  try {
+    const resp = await api.get(`/polls/${pollId}`);
+    return resp.data;
+  } catch (error) {
+    console.error("Error fetching poll: ", error);
+    throw error;
+  }
+};
+
+export default api;
