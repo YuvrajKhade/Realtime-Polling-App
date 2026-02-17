@@ -28,7 +28,7 @@
 ## 🚀 Live Demo
 
 
-🌐 **Project Url** => https://yuvraj-khade-realtime-polling-git-5cfcad-yuvraj-khades-projects.vercel.app/
+🌐 **Project Url** => https://yuvraj-khade-realtime-polling-app.vercel.app/
 
 
 ---
