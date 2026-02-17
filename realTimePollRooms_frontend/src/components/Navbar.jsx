@@ -1,14 +1,16 @@
-import { Navbar as BSNavbar, Nav, Container } from "react-bootstrap";
+import Navbar  from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 import { Link } from "react-router-dom";
 import assest from "../assests/assest";
 
-function Navbar() {
+function AppNavbar() {
   return (
-    <BSNavbar className="navbar-custom w-100" variant="dark" expand="lg">
+    <Navbar className="navbar-custom w-100" variant="dark" expand="lg">
       <Container fluid>
-        <BSNavbar.Brand> <img src={assest.poll} alt="poll" height={40} width={40}/> PollRooms</BSNavbar.Brand>
-        <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
-        <BSNavbar.Collapse id="basic-navbar-nav">
+        <Navbar.Brand> <img src={assest.poll} alt="poll" height={40} width={40}/> PollRooms</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">
               Home
@@ -17,10 +19,10 @@ function Navbar() {
               Create Poll
             </Nav.Link>
           </Nav>
-        </BSNavbar.Collapse>
+        </Navbar.Collapse>
       </Container>
-    </BSNavbar>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default AppNavbar;

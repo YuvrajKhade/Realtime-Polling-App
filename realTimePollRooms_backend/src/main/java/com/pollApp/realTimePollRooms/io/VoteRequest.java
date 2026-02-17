@@ -14,6 +14,6 @@ public class VoteRequest {
     private Long optId;
 
     @NotNull(message = "Voter id is required")
-    private Long voterId;
+    private String voterId;
 
 }

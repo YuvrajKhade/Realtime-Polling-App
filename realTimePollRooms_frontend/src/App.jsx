@@ -5,12 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import CreatePoll from "./pages/CreatePoll";
 import ViewPoll from "./pages/ViewPoll";
-import Navbar from "./components/Navbar";
+import AppNavbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <AppNavbar />
       <ToastContainer
         position="top-right"
         autoClose={3000}

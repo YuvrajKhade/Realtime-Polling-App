@@ -65,7 +65,7 @@ function ViewPoll() {
     try {
       const voteData = {
         optId: selectedOpt,
-        voterId: Number(voterID),
+        voterId: voterID,
       };
 
       const updatedPoll = await submitVote(pollId, voteData);

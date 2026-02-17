@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { Button } from "bootstrap";
+import Button from 'react-bootstrap/Button'
 import assest from "../assests/assest";
 
 function ShareLink({ pollId }) {
